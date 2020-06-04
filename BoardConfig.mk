@@ -32,11 +32,17 @@ include device/oneplus/oneplus7pro/BoardConfig.mk
 
 # AVB
 # Enable chain partition for system and product
+BOARD_AVB_KEY_PATH := /home/geofferey/.android-certs/avb_rsa2048.pem
+BOARD_AVB_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_ROLLBACK_INDEX := 0
+
+BOARD_AVB_ENABLE := true
 BOARD_AVB_VBMETA_SYSTEM := system product
-BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := /home/geofferey/.android-certs/avb_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
+
 
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1d84000.ufshc
 BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
