@@ -20,6 +20,8 @@
 # product configuration (apps).
 #
 
+GAPPS_VARIANT := nano
+
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/oneplus/oneplus7pro/prebuilt/product,product) \
@@ -37,3 +39,5 @@ AB_OTA_PARTITIONS += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     omni.biometrics.fingerprint.inscreen@1.0-service.oneplus7t
+
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
