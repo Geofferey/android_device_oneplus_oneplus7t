@@ -28,7 +28,8 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/oneplus/oneplus7pro/prebuilt/root,recovery/root)
 
 PRODUCT_COPY_FILES += \
-    device/oneplus/oneplus7t/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom
+    device/oneplus/oneplus7t/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom \
+    device/oneplus/oneplus7t/recovery.img:out/target/product/oneplus7t/recovery.img
 
 $(call inherit-product, device/oneplus/oneplus7pro/device.mk)
 
