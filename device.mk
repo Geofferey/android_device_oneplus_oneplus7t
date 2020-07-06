@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/oneplus/oneplus7t/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom \
-    device/oneplus/oneplus7t/recovery.img:out/target/product/oneplus7t/recovery.img
+    device/oneplus/oneplus7t/recovery.img:recovery.img
 
 $(call inherit-product, device/oneplus/oneplus7pro/device.mk)
 
@@ -40,5 +40,11 @@ AB_OTA_PARTITIONS += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     omni.biometrics.fingerprint.inscreen@1.0-service.oneplus7t
+
+# Public Additions
+
+$(call inherit-product, vendor/geofferey/public.mk)
+
+# Open GApps
 
 $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
