@@ -35,7 +35,8 @@ $(call inherit-product, device/oneplus/oneplus7pro/device.mk)
 
 AB_OTA_PARTITIONS += \
     product \
-    vbmeta_system
+    vbmeta_system \
+    vendor
 
 # Fingerprint
 PRODUCT_PACKAGES += \
