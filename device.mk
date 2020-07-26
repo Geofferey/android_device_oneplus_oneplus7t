@@ -28,15 +28,16 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/oneplus/oneplus7pro/prebuilt/root,recovery/root)
 
 PRODUCT_COPY_FILES += \
-    device/oneplus/oneplus7t/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom \
-    device/oneplus/oneplus7t/recovery.img:recovery.img
+    device/oneplus/oneplus7t/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom
 
 $(call inherit-product, device/oneplus/oneplus7pro/device.mk)
 
 AB_OTA_PARTITIONS += \
     product \
     vbmeta_system \
-    vendor
+    vendor \
+    odm \
+    recovery
 
 # Fingerprint
 PRODUCT_PACKAGES += \
