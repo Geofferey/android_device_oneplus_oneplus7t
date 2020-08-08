@@ -38,7 +38,9 @@ BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 7511998464
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     system \
-    product
+    product \
+	vendor \
+	odm
 
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -57,10 +59,10 @@ BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 # vendor and odm and we also dont want to AB update them
 TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 
-# enable to generate super_empy.img if needed to wipe super partition table
+# enable to generate super_empty.img if needed to wipe super partition table
 #BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST += \
-    vendor \
-    odm
+#    vendor \
+#    odm
 
 # must be before including omni part
 TARGET_BOOTANIMATION_SIZE := 1080p
