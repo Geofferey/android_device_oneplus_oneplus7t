@@ -60,9 +60,9 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Include prebuilt imgs
 
-BOARD_PREBUILT_VENDORIMAGE := vendor/oneplus-imgs/oneplus7t/2020-03-01/vendor.img
-BOARD_PREBUILT_RECOVERYIMAGE := vendor/oneplus-imgs/oneplus7t/2020-03-01/recovery.img
-BOARD_PREBUILT_ODMIMAGE := vendor/oneplus-imgs/oneplus7t/2020-03-01/odm.img
+BOARD_PREBUILT_VENDORIMAGE := vendor/oneplus-imgs/oneplus7t/2020-05-01/vendor.img
+BOARD_PREBUILT_RECOVERYIMAGE := vendor/oneplus-imgs/oneplus7t/2020-05-01/recovery.img
+BOARD_PREBUILT_ODMIMAGE := vendor/oneplus-imgs/oneplus7t/2020-05-01/odm.img
 
 # Flatten APEX images
 
